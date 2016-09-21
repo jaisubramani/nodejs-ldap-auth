@@ -1,0 +1,48 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    padding-top: 50px;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    font: normal 14px Roboto, arial, sans-serif;
+    padding-bottom: 70px;
+}
+
+h4.header {
+    color: #616161;
+}
+
+h2.header {
+    color: #616161;
+    text-align: center;
+}
+
+label.header {
+    color: #616161
+    font-weight: 300;
+}
+
+span.header {
+    color: #616161;
+    font-size: medium;
+    font-weight: 300;
+}
+
+span.subheader {
+    font-size: small;
+    font-weight: 300;
+}
+
+a.bluelink {
+    color: #337ab7;
+}
+
+p.small {
+    font-size: medium;
+}
+
+p.footnote {
+    font-size: x-small;
+}

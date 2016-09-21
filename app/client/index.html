@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>nodejs-ldap-auth</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body class="container" ng-app="nodejsldapauth">
+    <header ng-controller="MainController">
+      <div class="navbar navbar-default" ng-show="auth.loggedIn()">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">nodejs-jwt-ldap-auth</a>
+          </div>
+          <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#" target="_blank">Link 1</a></li>
+              <li><a href="#" target="_blank">Link 2</a></li>
+              <li><a href="#" target="_blank">Link 3</a></li>
+              <li class="dropdown">
+                <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Menu
+                  <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" target="_blank">Menu 1</a></li>
+                  <li><a href="#" target="_blank">Menu 2</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" target="_blank">Menu 3</a></li>
+                  <li><a href="#" target="_blank">Menu 4</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav navbar-text"><small>Hello <b>{{ auth.loggedInUser() }}</b></small></li>
+              <li><a ui-sref="logout">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+    <script src="bower_components/arrive/minified/arrive.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+    <script src="js/client.js"></script>
+    <script src="js/services/authService.js"></script>
+    <script src="js/controllers/loginController.js"></script>
+    <script src="js/controllers/logoutController.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.material.init();
+        });
+    </script>
+    <div class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <span class="navbar-text navbar-content-center">
+          <i class="fa fa-copyright"></i> 2016 XYZ Corp
+        </span>
+      </div>
+    </div>
+    <main ui-view></main>
+  </body>
+</html>

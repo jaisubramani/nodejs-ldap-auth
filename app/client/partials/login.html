@@ -1,0 +1,38 @@
+<style>
+body {
+  padding-top:200px;
+}
+</style>
+<div class="container">
+  <form name="loginForm" class="form-horizontal" ng-submit="loginForm.$valid && loginService()" novalidate>
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <div class="jumbotron">
+          <h2 class="header">nodejs-ldap-auth</h2>
+
+          <div class="alert alert-dismissible alert-warning" ng-show="success == false">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            {{ message }}
+          </div>
+
+          <div class="form-group form-group-lg">
+            <input type="text" name="username" ng-model="formData.username" class="form-control" placeholder="Username" required>
+            <p class="help-block"><small>Your AD/LDAP username</small></p>
+          </div>
+
+          <div class="form-group form-group-lg">
+            <input type="password" name="password" ng-model="formData.password" class="form-control" placeholder="Password" required>
+            <p class="help-block"><small>Your AD/LDAP password</small></p>
+          </div>
+
+          <div class="form-group form-group-lg" align="center">
+            <button type="submit" class="btn btn-raised btn-primary">login</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div ui-view></div>
