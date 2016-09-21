@@ -1,6 +1,6 @@
 {
   "name": "Nodejs-ldap-auth",
   "tagline": "Simple Angular SPA with LDAP Auth integration",
-  "body": "# nodejs-ldap-auth\r\n\r\nSimple Angular SPA with LDAP Auth integration\r\n\r\n### Update app/config.js file with LDAP details\r\n\r\n+ `ldapUrl` can be `ldaps://<ip-or-host>`\r\n+ `ldapBaseDn` is the distinguished name `CN=Users,DC=example,DC=com`\r\n+ `ldapSearchFilter` can be `uid`\r\n",
+  "body": "# nodejs-ldap-auth\r\n\r\nSimple Angular SPA with LDAP Auth integration\r\n\r\n### Update app/config.js file with LDAP details\r\n\r\n+ `ldapUrl` can be `ldaps://<ip-or-host>`\r\n+ `ldapBaseDn` is the distinguished name `CN=Users,DC=example,DC=com`\r\n+ `ldapSearchFilter` can be `uid`\r\n\r\n### To run\r\n\r\n+ `docker build -t nodejs-ldap-auth .`\r\n+ `docker run -itd -p 8080:8080 nodejs-ldap-auth`\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
