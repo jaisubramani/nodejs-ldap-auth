@@ -12,3 +12,4 @@ Simple Angular SPA with LDAP Auth integration
 
 + `docker build -t nodejs-ldap-auth .`
 + `docker run -itd -p 8080:8080 nodejs-ldap-auth`
++ open the browser and hit [port 8080](http://localhost:8080)
